@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["loureirorg@gmail.com"]
   spec.summary       = %q{Simple list of cities and states of the world}
   spec.description   = %q{Useful to make forms and validations. It uses MaxMind database.}
-  spec.homepage      = "https://github.com/loureirorg/city-state"
+  spec.homepage      = "https://github.com/singh-bpratap/city-state"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

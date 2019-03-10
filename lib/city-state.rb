@@ -195,3 +195,27 @@ module CS
     return self.cities(state, country)
   end
 end
+
+module CSForSelect
+  def self.cities(state, country = nil)
+    CS.cities(state, country)
+  end
+
+  def self.states(country)
+    to_array CS.states(country)
+  end
+
+  def self.countries
+    to_array CS.countries
+  end
+
+  private
+
+  def self.to_array(hash)
+    return nil unless hash.is_a?(Hash)
+
+    hash.to_a
+      .map { |c| [c[1], c[0]] }
+      .sort { |a, b| a[0] <=> b[0] }
+  end
+end
