@@ -214,7 +214,7 @@ module CSForSelect
   def self.to_array(hash)
     return nil unless hash.is_a?(Hash)
 
-    hash.to_a
+    hash.stringify_keys.to_a
       .map { |c| [c[1], c[0]] }
       .sort { |a, b| a[0] <=> b[0] }
   end
